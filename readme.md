@@ -1,7 +1,7 @@
 # Logic 
 A single bit, for example, can represent the truth of a statement, this is what logic is all about. Learn about the fundamentals of logic from this video:
 * Introduction to logic and truth tables
-[](https://www.youtube.com/watch?v=OLGVhszBlq4)
+[youtube](https://www.youtube.com/watch?v=OLGVhszBlq4)
 
 __Question 1.__ What is the negation of the statement:
 >"If I have enough time, I will become an awesome programmer"

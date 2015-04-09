@@ -18,6 +18,10 @@
     "requires": [
       "binary"
     ],
+    "content-transform": [
+      "brainpm-youtube"
+    ],
+    "main": "index.js",
     "track": "yellow"
   },
   "author": "Jan Bölsche <jan@lagomorph.de> (http://regular.codes)",
@@ -25,5 +29,11 @@
   "bugs": {
     "url": "https://github.com/shecodes-content/logic/issues"
   },
-  "homepage": "https://github.com/shecodes-content/logic"
+  "homepage": "https://github.com/shecodes-content/logic",
+  "devDependencies": {
+    "brainpm-youtube": "^1.1.0"
+  },
+  "dependencies": {
+    "lazy-youtube": "^2.0.1"
+  }
 }
