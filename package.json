@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/shecodes-content/logic",
   "devDependencies": {
-    "brainpm-youtube": "^1.1.0"
+    "brainpm-youtube": "1.x.x"
   },
   "dependencies": {
     "lazy-youtube": "^2.0.1"
