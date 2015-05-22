@@ -1,4 +1,4 @@
-# Logic 
+# Logic
 A single bit can represent a number of things. For example, it can indicate whether a switch is in the `on` or `off` position, whether a particular dot on a screen is black or white, or whether a statement like "It is currently raining" is true or false.
 
 This last example – representing the truthfulness of a statement with a single bit – is what *logic* is all about. Learn about the fundamentals of logic from this video.
