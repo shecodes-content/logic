@@ -10,7 +10,7 @@ getDocumentFragment = module.exports.getDocumentFragment = function() {
     div.innerHTML = html;
     while (div.firstChild) frag.appendChild(div.firstChild);
     
-        require("/Users/regular/dev/shecodes/content/logic/index.js")(frag);
+        require("/Users/regular/.bpm/clones/logic/index.js")(frag);
     
     return frag;
 };
@@ -20,46 +20,7 @@ if (typeof(window) !== 'undefined' && window.events) {
     window.events.emit('append_episode', module.exports);
 }
 
-},{"/Users/regular/dev/shecodes/content/logic/index.js":3}],2:[function(require,module,exports){
-module.exports = function (css, customDocument) {
-  var doc = customDocument || document;
-  if (doc.createStyleSheet) {
-    var sheet = doc.createStyleSheet()
-    sheet.cssText = css;
-    return sheet.ownerNode;
-  } else {
-    var head = doc.getElementsByTagName('head')[0],
-        style = doc.createElement('style');
-
-    style.type = 'text/css';
-
-    if (style.styleSheet) {
-      style.styleSheet.cssText = css;
-    } else {
-      style.appendChild(doc.createTextNode(css));
-    }
-
-    head.appendChild(style);
-    return style;
-  }
-};
-
-module.exports.byUrl = function(url) {
-  if (document.createStyleSheet) {
-    return document.createStyleSheet(url).ownerNode;
-  } else {
-    var head = document.getElementsByTagName('head')[0],
-        link = document.createElement('link');
-
-    link.rel = 'stylesheet';
-    link.href = url;
-
-    head.appendChild(link);
-    return link;
-  }
-};
-
-},{}],3:[function(require,module,exports){
+},{"/Users/regular/.bpm/clones/logic/index.js":2}],2:[function(require,module,exports){
 var lazyYoutube = require('lazy-youtube');
 var styleNode = require('./node_modules/lazy-youtube/lazyyt.css');
 
@@ -70,7 +31,7 @@ module.exports = function(fragment) {
     }
 };
 
-},{"./node_modules/lazy-youtube/lazyyt.css":5,"lazy-youtube":4}],4:[function(require,module,exports){
+},{"./node_modules/lazy-youtube/lazyyt.css":4,"lazy-youtube":3}],3:[function(require,module,exports){
 /*!
 * lazyYT (lazy load YouTube videos)
 * v1.0.1 - 2014-12-30
@@ -200,9 +161,9 @@ module.exports = function (element, opts) {
   init(element, opts);
 };
 
-},{"dom-events":6,"element-class":10}],5:[function(require,module,exports){
-var css = "/*!\n* lazyYT (lazy load YouTube videos)\n* v1.0.1 - 2014-12-30\n* (CC) This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.\n* http://creativecommons.org/licenses/by-sa/4.0/\n* Contributors: https://github.com/tylerpearson/lazyYT/graphs/contributors || https://github.com/daugilas/lazyYT/graphs/contributors\n*/\n\n.lazyYT-container {\n  position: relative;\n  display: block;\n  height: 0;\n  padding: 0 0 56.25% 0;\n  overflow: hidden;\n  background-color: #000000;\n}\n\n.lazyYT-container iframe {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  border: 0;\n}\n\n/*\n * Thumbnail\n */\n\n.ytp-thumbnail {\n  padding-bottom: inherit;\n  cursor: pointer;\n  background-position: 50% 50%;\n  background-repeat: no-repeat;\n  -webkit-background-size: cover;\n     -moz-background-size: cover;\n       -o-background-size: cover;\n          background-size: cover;\n}\n\n/*\n * Play button (YouTube style)\n */\n\n.ytp-large-play-button {\n  position: absolute;\n  top: 50% !important;\n  left: 50% !important;\n  width: 86px !important;\n  height: 60px !important;\n  padding: 0 !important;\n  margin: -29px 0 0 -42px !important;\n  font-size: normal !important;\n  font-weight: normal !important;\n  line-height: 1 !important;\n  opacity: .9;\n}\n\n.ytp-large-play-button-svg {\n  opacity: .9;\n  fill: #1f1f1f;\n}\n\n.lazyYT-image-loaded:hover .ytp-large-play-button-svg,\n.ytp-large-play-button:focus .ytp-large-play-button-svg {\n  opacity: 1;\n  fill: #cc181e;\n}\n"; (require("./../../../../../bpm/node_modules/bpm-bundle/node_modules/cssify"))(css); module.exports = css;
-},{"./../../../../../bpm/node_modules/bpm-bundle/node_modules/cssify":2}],6:[function(require,module,exports){
+},{"dom-events":5,"element-class":9}],4:[function(require,module,exports){
+var css = "/*!\n* lazyYT (lazy load YouTube videos)\n* v1.0.1 - 2014-12-30\n* (CC) This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.\n* http://creativecommons.org/licenses/by-sa/4.0/\n* Contributors: https://github.com/tylerpearson/lazyYT/graphs/contributors || https://github.com/daugilas/lazyYT/graphs/contributors\n*/\n\n.lazyYT-container {\n  position: relative;\n  display: block;\n  height: 0;\n  padding: 0 0 56.25% 0;\n  overflow: hidden;\n  background-color: #000000;\n}\n\n.lazyYT-container iframe {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  border: 0;\n}\n\n/*\n * Thumbnail\n */\n\n.ytp-thumbnail {\n  padding-bottom: inherit;\n  cursor: pointer;\n  background-position: 50% 50%;\n  background-repeat: no-repeat;\n  -webkit-background-size: cover;\n     -moz-background-size: cover;\n       -o-background-size: cover;\n          background-size: cover;\n}\n\n/*\n * Play button (YouTube style)\n */\n\n.ytp-large-play-button {\n  position: absolute;\n  top: 50% !important;\n  left: 50% !important;\n  width: 86px !important;\n  height: 60px !important;\n  padding: 0 !important;\n  margin: -29px 0 0 -42px !important;\n  font-size: normal !important;\n  font-weight: normal !important;\n  line-height: 1 !important;\n  opacity: .9;\n}\n\n.ytp-large-play-button-svg {\n  opacity: .9;\n  fill: #1f1f1f;\n}\n\n.lazyYT-image-loaded:hover .ytp-large-play-button-svg,\n.ytp-large-play-button:focus .ytp-large-play-button-svg {\n  opacity: 1;\n  fill: #cc181e;\n}\n"; (require("./../../../../../dev/bpm-bundle/node_modules/cssify"))(css); module.exports = css;
+},{"./../../../../../dev/bpm-bundle/node_modules/cssify":10}],5:[function(require,module,exports){
 
 var synth = require('synthetic-dom-events');
 
@@ -253,7 +214,7 @@ module.exports = {
     emit: emit
 };
 
-},{"synthetic-dom-events":7}],7:[function(require,module,exports){
+},{"synthetic-dom-events":6}],6:[function(require,module,exports){
 
 // for compression
 var win = window;
@@ -374,7 +335,7 @@ var typeOf = (function () {
     };
 })();
 
-},{"./init.json":8,"./types.json":9}],8:[function(require,module,exports){
+},{"./init.json":7,"./types.json":8}],7:[function(require,module,exports){
 module.exports={
   "initEvent" : [
     "type",
@@ -441,7 +402,7 @@ module.exports={
   ]
 }
 
-},{}],9:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 module.exports={
   "MouseEvent" : [
     "click",
@@ -486,7 +447,7 @@ module.exports={
   ]
 }
 
-},{}],10:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 module.exports = function(opts) {
   return new ElementClass(opts)
 }
@@ -539,5 +500,44 @@ ElementClass.prototype.has = function(className) {
   var classes = el.className.split(' ')
   return indexOf(classes, className) > -1
 }
+
+},{}],10:[function(require,module,exports){
+module.exports = function (css, customDocument) {
+  var doc = customDocument || document;
+  if (doc.createStyleSheet) {
+    var sheet = doc.createStyleSheet()
+    sheet.cssText = css;
+    return sheet.ownerNode;
+  } else {
+    var head = doc.getElementsByTagName('head')[0],
+        style = doc.createElement('style');
+
+    style.type = 'text/css';
+
+    if (style.styleSheet) {
+      style.styleSheet.cssText = css;
+    } else {
+      style.appendChild(doc.createTextNode(css));
+    }
+
+    head.appendChild(style);
+    return style;
+  }
+};
+
+module.exports.byUrl = function(url) {
+  if (document.createStyleSheet) {
+    return document.createStyleSheet(url).ownerNode;
+  } else {
+    var head = document.getElementsByTagName('head')[0],
+        link = document.createElement('link');
+
+    link.rel = 'stylesheet';
+    link.href = url;
+
+    head.appendChild(link);
+    return link;
+  }
+};
 
 },{}]},{},[1]);
