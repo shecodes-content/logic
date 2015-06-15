@@ -1,0 +1,43 @@
+{
+  "name": "logic",
+  "version": "1.0.0",
+  "description": "about logic and truth tables",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:shecodes-content/logic.git"
+  },
+  "brain": {
+    "provides": [
+      "logic",
+      "truth-tables"
+    ],
+    "requires": [
+      "binary"
+    ],
+    "content-transform": [
+      "brainpm-youtube"
+    ],
+    "main": "index.js",
+    "track": "yellow",
+    "bundler": {
+      "name": "bpm-bundle",
+      "version": "1.2.0"
+    }
+  },
+  "author": "Jan Bölsche <jan@lagomorph.de> (http://regular.codes)",
+  "license": "CC-SA-BY-3.0",
+  "bugs": {
+    "url": "https://github.com/shecodes-content/logic/issues"
+  },
+  "homepage": "https://github.com/shecodes-content/logic",
+  "devDependencies": {
+    "brainpm-youtube": "1.x.x"
+  },
+  "dependencies": {
+    "lazy-youtube": "^2.0.1"
+  }
+}
